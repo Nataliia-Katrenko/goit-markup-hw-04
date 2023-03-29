@@ -305,14 +305,20 @@ img {
    gap: 24px;
 
 }
+.customers-link {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
 .customer-icon {
    width: 168px;
    height: 88px;
    border: 1px solid var(--subtle-text);
    border-radius: 5px; 
-   padding: 16px 32px;
    fill: var(--subtle-text);
    display: flex;
+   align-items: center;
+   justify-content: center;
    cursor: pointer;
 }
 .customer-icon:is( :hover, :focus) {
