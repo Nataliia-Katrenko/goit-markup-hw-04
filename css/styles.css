@@ -24,9 +24,6 @@ body{
 .link {
    text-decoration: none;
 }
-/* main {
-   max-width: 1440px;
-} */
 .container {
    max-width: 1158px;
    margin: 0 auto;
@@ -40,6 +37,7 @@ img {
    max-width: 100%;
    height: auto;
 }
+
 /* ------------------------INDEX----------------------- */
 
 /* ------------------------HEADER----------------------- */
@@ -153,25 +151,24 @@ img {
    padding: 0;
 }
 /* ------------------------ABOUT----------------------- */
-.main-icon {
-   width: 264px;
-   height: 112px;
-   background: var(--background-team);
-   border-radius: 4px;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   margin-bottom: 8px;
-}
-.main-list {
+.about {
    padding-top: 120px;
    padding-bottom: 120px;
 }
-.main-list-items {
+.about-icon {
+   width: 264px;
+   height: 112px;
+   background: var(--background-team);
+   background-position: center;
+   border-radius: 4px;
+   margin-bottom: 8px;
+   padding: 24px 100px;
+}
+.about-list-items {
    display: flex;
    gap: 24px;
 }
-.main-list-title {
+.about-list-title {
    font-weight: 500;
    font-size: 20px;
    line-height: 1.2;
@@ -179,7 +176,7 @@ img {
    color: var(--color-link);
    margin-bottom: 8px;
 }
-.main-list-text {
+.about-list-text {
    max-width: 264px;
    font-size: 16px;
    line-height: 1.5;
@@ -237,8 +234,8 @@ img {
 }
 .item-team {
    display: flex;
-   gap: 24px;
    justify-content: center;
+   gap: 24px;
 }
 .team-title {
    font-weight: 500;
@@ -262,6 +259,8 @@ img {
    align-items: center;
    justify-content: center;
    gap: 24px;
+   margin-left: 16px;
+   margin-right: 16px;
 }
 .team-soc-item {
    width: 40px;
@@ -281,23 +280,10 @@ img {
    background: var(--color-hover);
 }
 .team-soc-icon {
-   width: 24px;
-   height: 24px;
+   width: 16px;
+   height: 16px;
 }
 /* ------------------------CUSTOMERS----------------------- */
-.customers {
-   max-width: 1440px;
-   margin: auto;
-   padding-top: 120px;
-   padding-bottom: 120px;
-}
-.customers-title {
-   font-size: 36px;
-   line-height: 1.11;
-   text-align: center;
-   letter-spacing: 0.02em;
-   text-transform: capitalize;
-}
 .customers {
    max-width: 1440px;
    margin: auto;
@@ -314,26 +300,27 @@ img {
 }
 .customers-list {
    display: flex;
-   gap: 24px;
-}
-.customers-item {
-
-}
-.customers-link {
-   display: flex;
    align-items: center;
    justify-content: center;
+   gap: 24px;
 
 }
 .customer-icon {
    width: 168px;
    height: 88px;
-   border: 2px solid var(--subtle-text);
-   border-radius: 5px;  
+   border: 1px solid var(--subtle-text);
+   border-radius: 5px; 
+   padding: 16px 32px;
+   fill: var(--subtle-text);
+   display: flex;
+   cursor: pointer;
+}
+.customer-icon:is( :hover, :focus) {
+   fill: var(--color-hover);
+   border: 1px solid var(--color-hover);
 }
 /* ------------------------FOOTER----------------------- */
 .footer {
-   max-width: 1440px;
    background: var(--color-link);
    margin: auto;
    padding-top: 100px;
@@ -353,6 +340,9 @@ img {
    letter-spacing: 0.03em;
    text-transform: uppercase;
    color: var(--color-logo);
+   display: flex;
+   align-items: center;
+   justify-content: center;
 }
 .footer-text {
    max-width: 264px;
@@ -364,8 +354,6 @@ img {
 }
 .studio-footer {
    color: var(--background-team);
-}
-.footer-soc {
 }
 .footer-title {
    font-weight: 500;
@@ -396,12 +384,12 @@ img {
    align-items: center;
    justify-content: center;
 }
+.footer-soc-link:is(:hover, :focus) {
+   background: var(--color-hover);
+}
 .footer-soc-icon {
    width: 24px;
    height: 24px;
-}
-.footer-soc-link:is(:hover, :focus) {
-   background: var(--color-hover-icon);
 }
 /* -----------------PORTFOLIO---------------- */
 main {
@@ -420,7 +408,6 @@ main {
    clip: rect(0 0 0 0);
    overflow: hidden;
  }
-
 .btn {
    display: flex;
    gap: 24px;
@@ -440,7 +427,6 @@ main {
    padding: 12px 24px 12px 24px;
    border-radius: 4px;
 }
-
 .main-button:is(:hover, :focus) {
    color: var(--color-background);
    background: var(--color-hover);
